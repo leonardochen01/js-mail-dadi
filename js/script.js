@@ -6,9 +6,12 @@ document.addEventListener("click", function(){
   var emailList = ["a@gmail.com","b@gmail.com","c@gmail.com"];
 
   //condizioni
-  if (emailList.indexOf(email)) {
+  if (emailList.indexOf(email) !== -1) {
     document.getElementById("logged").innerHTML = ("Hai effettuato l'accesso, puoi iniziare il gioco");
+    document.getElementById("container-game").style.display = "block";
+    document.getElementById("warn").innerHTML = ("");
   } else {
     document.getElementById("warn").innerHTML = ("Utente non registrato, impossibile accedere");
+    document.getElementById("container-game").style.display = "none";
   }
 })
