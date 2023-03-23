@@ -3,6 +3,12 @@
 document.addEventListener("click", function(){
 
   var email = document.getElementById("email").value;
-  var emailList = ["a@gmail.com, b@gmail.com, c@gmail.com"]
+  var emailList = ["a@gmail.com","b@gmail.com","c@gmail.com"];
 
+  //condizioni
+  if (emailList.indexOf(email)) {
+    document.getElementById("logged").innerHTML = ("Hai effettuato l'accesso, puoi iniziare il gioco");
+  } else {
+    document.getElementById("warn").innerHTML = ("Utente non registrato, impossibile accedere");
+  }
 })
