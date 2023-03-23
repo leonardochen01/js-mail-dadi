@@ -1,7 +1,8 @@
 //aggiungo bottone login che consente l'accesso se l'utente accede con email loggato
 
-document.addEventListener("click", function(){
+const button1 = document.querySelector('#verify');//ho aggiunto un queryselector perche ho due pulsanti differenti
 
+button1.addEventListener("click", function(){
   var email = document.getElementById("email").value;
   var emailList = ["a@gmail.com","b@gmail.com","c@gmail.com"];
 
@@ -15,3 +16,27 @@ document.addEventListener("click", function(){
     document.getElementById("container-game").style.display = "none";
   }
 })
+
+//function dado
+const button2 = document.querySelector('#play');
+
+button2.addEventListener("click", function(){
+
+
+  var punteggioUtente = Math.floor(Math.random() * 6) + 1;
+  var punteggioComputer = Math.floor(Math.random() * 6) + 1;
+
+  document.getElementById("user").innerHTML = punteggioUtente;
+  document.getElementById("cpu").innerHTML = punteggioComputer;
+  if (punteggioUtente > punteggioComputer) {
+    document.getElementById("risultato").innerHTML = "Hai vinto!";
+  } else if (punteggioUtente < punteggioComputer) {
+    document.getElementById("risultato").innerHTML = "Hai perso!";
+  } else {
+    document.getElementById("risultato").innerHTML = "Avete pareggiato!";
+  }
+
+})
+document.addEventListener
+
+//ho finito, vorrei farlo piu carino ma non ho tempo
